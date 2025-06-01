@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCalculadorDeEstadia.Views.ContratandoEstadia"
+             Title="Contratando Estadia"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource MidnightBlue}">
+    <VerticalStackLayout VerticalOptions="Center" Padding="10">
+        <Label 
+            Text="Definindo sua estadia conosco"
+            HorizontalOptions="Center"
+            FontFamily="DancingScriptRegular"
+            TextColor="White"
+            FontSize="50"/>
+        <Frame Padding="10">
+            <VerticalStackLayout >
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto"
+                      ColumnDefinitions="*,*,2*">
+                    <Label Grid.Row="0" 
+                           Grid.Column="0" 
+                           Text="Adultos:">
+                    </Label>
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Text="Criancas:">
+                    </Label>
+                    <Label 
+                        Grid.Row="0" 
+                        Grid.Column="1" 
+                        Text="{Binding Value}" 
+                        BindingContext="{x:Reference StepperAdultos}">
+                    </Label>
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="1" 
+                        Text="{Binding Value}" 
+                        BindingContext="{x:Reference StepperKids}">
+                    </Label>
+                    <Stepper 
+                        x:Name="StepperAdultos"  
+                        Grid.Row="0" 
+                        Grid.Column="2" 
+                        Minimum="0"
+                        Maximum="10" 
+                        Increment="1">
+                    </Stepper>
+                    <Stepper 
+                        x:Name="StepperKids"
+                        Grid.Row="1" 
+                        Grid.Column="2" 
+                        Minimum="0" 
+                        Maximum="10" 
+                        Increment="1">
+                    </Stepper>
+                </Grid>
+                <Label Text="Escolha sua suíte"></Label>
+                <Picker x:Name="PickerSuite" Title=" aqui:"></Picker>
+                
+                <Frame Padding="10" Margin="10">
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Data de Check-in:">
+                            </Label>
+                            <DatePicker x:Name="DatePickerCheckIn" Format="dd/mm/yyyy">
+                            </DatePicker>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Data de Check-Out:">
+                            </Label>
+                            <DatePicker x:Name="DatePickerCheck-Out" Format="dd/mm/yyyy">
+                            </DatePicker>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

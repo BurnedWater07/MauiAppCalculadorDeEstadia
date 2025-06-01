@@ -13,6 +13,11 @@ namespace MauiAppCalculadorDeEstadia
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("DancingScript-Regular.ttf", "DancingScriptRegular");
+                    fonts.AddFont("DancingScript-Medium.ttf", "DancingScriptMedium");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+
+
                 });
 
 #if DEBUG

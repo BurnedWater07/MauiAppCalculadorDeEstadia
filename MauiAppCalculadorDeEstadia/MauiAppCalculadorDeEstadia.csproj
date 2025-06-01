@@ -62,4 +62,22 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="Views\ContratandoEstadia.xaml.cs">
+	    <DependentUpon>ContratandoEstadia.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\EstadiaContratada.xaml.cs">
+	    <DependentUpon>EstadiaContratada.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\ContratandoEstadia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EstadiaContratada.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
