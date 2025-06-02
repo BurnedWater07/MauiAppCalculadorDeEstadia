@@ -72,7 +72,6 @@
                             </DatePicker>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
-                    
                 </Frame>
             </VerticalStackLayout>
         </Frame>
